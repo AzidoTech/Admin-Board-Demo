@@ -16,6 +16,9 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
+
+import AddUser from "../team/AddUser";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -80,7 +83,7 @@ const Sidebar = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  ADMINIS
+                  ADMIN
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -137,6 +140,13 @@ const Sidebar = () => {
               to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
+              setSelected={setSelected}
+            />
+            <Item
+              title="Add Users"
+              to="/addUser"
+              selected={selected}
+              icon={<PersonAddAltIcon />}
               setSelected={setSelected}
             />
             <Item
